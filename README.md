@@ -2,6 +2,8 @@
 
 # 🌎 Laravel Geolocation package
 
+[![Latest Stable Version](http://poser.pugx.org/kazelot/laravel-geolocation/v)](https://packagist.org/packages/kazelot/laravel-geolocation) [![Total Downloads](http://poser.pugx.org/kazelot/laravel-geolocation/downloads)](https://packagist.org/packages/kazelot/laravel-geolocation) [![Latest Unstable Version](http://poser.pugx.org/kazelot/laravel-geolocation/v/unstable)](https://packagist.org/packages/kazelot/laravel-geolocation) [![License](http://poser.pugx.org/kazelot/laravel-geolocation/license)](https://packagist.org/packages/kazelot/laravel-geolocation) [![PHP Version Require](http://poser.pugx.org/kazelot/laravel-geolocation/require/php)](https://packagist.org/packages/kazelot/laravel-geolocation)
+
 > A simple package for geolocation.
 
 ## 🚀 Features
