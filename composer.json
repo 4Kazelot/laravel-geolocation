@@ -1,0 +1,40 @@
+{
+    "name": "kazelot/laravel-geolocation",
+    "description": "A simple Laravel package for geolocation.",
+    "keywords": [
+        "kazelot",
+        "laravel-geolocation",
+        "geolocation",
+        "laravel",
+        "php"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kazelot\\Geolocation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "4Kazelot",
+            "email": "4Kazelot@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kazelot\\Geolocation\\GeolocationServiceProvider"
+            ],
+            "aliases": {
+                "Geolocation": "Kazelot\\Geolocation\\GeolocationFacade"
+            }
+        }
+    },
+    "prefer-stable": true
+}
