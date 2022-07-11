@@ -46,11 +46,15 @@ class Geolocation
 
         $url = $this->getUrl($ip);
 
-        $response = Http::acceptJson()
-            ->withToken($this->provider['api_key'])
-            ->timeout($this->driver::TIMEOUT)
-            ->get($url)
-            ->json();
+        try {
+            $response = Http::acceptJson()
+                ->withToken($this->provider['api_key'])
+                ->timeout($this->driver::TIMEOUT)
+                ->get($url)
+                ->json();
+        } catch (\Throwable $th) {
+            throw new GeolocationException($th->getMessage());
+        }
 
         return new GeolocationResponse($response, $this->driver->casts);
     }
