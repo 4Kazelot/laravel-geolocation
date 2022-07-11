@@ -48,7 +48,7 @@ class Geolocation
 
         $response = Http::acceptJson()
             ->withToken($this->provider['api_key'])
-            ->timeout($this->driver::TIMEOUT * 1000)
+            ->timeout($this->driver::TIMEOUT)
             ->get($url)
             ->json();
 
