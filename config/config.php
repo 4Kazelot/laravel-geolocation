@@ -17,6 +17,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Always Return Reply
+    |--------------------------------------------------------------------------
+    | 
+    | Enable this option if you want a reply with blank fields, in case
+    | the host is unavailable or geolocation data cannot be obtained.
+    |
+    */
+
+    'alwaysReturnReply' => false,
+
+    /*
+    |--------------------------------------------------------------------------
     | Geolocation Providers
     |--------------------------------------------------------------------------
     |

@@ -53,10 +53,12 @@ class Geolocation
                 ->get($url)
                 ->json();
         } catch (\Throwable $th) {
-            throw new GeolocationException($th->getMessage());
+            if (!config('geolocation')['alwaysReturnReply']) {
+                throw new GeolocationException($th->getMessage());
+            }
         }
 
-        return new GeolocationResponse($response, $this->driver->casts);
+        return new GeolocationResponse($response ?? [], $this->driver->casts);
     }
 
     /**
