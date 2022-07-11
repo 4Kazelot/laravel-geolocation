@@ -81,7 +81,7 @@ class GeolocationResponse
     public function __call($name, $arguments): mixed
     {
         if (!property_exists(self::class, $name)) {
-            throw new \Exception('Property ' . $name . ' not found.');
+            throw new GeolocationException('Property ' . $name . ' not found.');
         }
 
         return $this->{$name};

@@ -65,17 +65,17 @@ class Geolocation
         $config = config('geolocation');
 
         if (!$config) {
-            throw new \Exception('Geolocation config not found.');
+            throw new GeolocationException('Geolocation config not found.');
         }
 
         $defaultProvider = $config['default'];
 
         if (!$defaultProvider) {
-            throw new \Exception('Default provider not found.');
+            throw new GeolocationException('Default provider not found.');
         }
 
         if (!array_key_exists($defaultProvider, $config['providers'])) {
-            throw new \Exception('Provider not found.');
+            throw new GeolocationException('Provider not found.');
         }
 
         $this->provider = $config['providers'][$defaultProvider];
